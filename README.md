@@ -1,5 +1,12 @@
 # AI Code Review Tool
 
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-Express-339933?logo=node.js&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Prisma-4169E1?logo=postgresql&logoColor=white)
+![Claude API](https://img.shields.io/badge/Claude-API-D97757?logo=anthropic&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-informational)
+
 Paste a GitHub pull request URL and get an AI-generated code review: quality issues, security
 flags, and concrete suggestions, with history tracking per user.
 
