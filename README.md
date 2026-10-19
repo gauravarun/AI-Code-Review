@@ -1,5 +1,6 @@
 # AI Code Review Tool
 
+[![CI](https://github.com/gauravarun/AI-Code-Review/actions/workflows/ci.yml/badge.svg)](https://github.com/gauravarun/AI-Code-Review/actions/workflows/ci.yml)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-Express-339933?logo=node.js&logoColor=white)
@@ -84,5 +85,6 @@ for encrypting stored GitHub access tokens — use a long random string, not the
 - History is scoped per signed-in user (Postgres `Review` rows keyed by `userId`).
 - The GitHub OAuth scope requested is `repo` (needed to read PR diffs on private repos); drop to
   `public_repo` if you only need public repos.
-- No automated test suite yet — `npm run build` (client and server) and `npx tsc --noEmit` are the
-  current correctness checks.
+- Tests: `cd server && npm test` (Vitest) covers PR URL parsing, diff batching, scoring, and token
+  encryption. CI (GitHub Actions) runs typecheck + tests for the server and lint + build for the client.
+  The Claude/GitHub/DB integration paths are not yet covered by automated tests.

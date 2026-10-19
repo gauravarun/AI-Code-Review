@@ -133,7 +133,7 @@ async function analyzeBatch(prTitle: string, batch: PrFile[]): Promise<BatchRevi
   return { batchSummary: input.batchSummary, issues: input.issues ?? [] };
 }
 
-function scoreFromIssues(issues: ReviewIssue[]): number {
+export function scoreFromIssues(issues: ReviewIssue[]): number {
   const penalties: Record<IssueSeverity, number> = { critical: 25, high: 12, medium: 5, low: 2 };
   const total = issues.reduce((sum, issue) => sum + penalties[issue.severity], 0);
   return Math.max(0, 100 - total);
